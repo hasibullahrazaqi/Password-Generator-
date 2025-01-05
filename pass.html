@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>password genarator</title>
+
+    <style>
+      #span::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: green;
+        bottom: -7px;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body class="bg-blue-950 h-screen flex justify-start items-center">
+    <div class="ml-52 relative">
+      <h1 class="font-bold text-white capitalize text-5xl leading-snug">
+        genarate a <br />
+        <span id="span" class="text-emerald-600 relative">random password</span>
+      </h1>
+      <input
+        id="password"
+        class="py-5 px-2 text-2xl my-10 rounded-md"
+        type="text"
+        size="50"
+        placeholder="password"
+      />
+      <span onclick="copyPassword()" id="copy"
+        ><i
+          class="bx bx-copy absolute right-5 text-5xl bottom-28 text-emerald-600"
+        ></i
+      ></span>
+      <br />
+      <button
+        onclick="creatPassword()"
+        id="myBtn"
+        class="py-4 px-10 bg-emerald-600 rounded-md text-white text-xl capitalize"
+      >
+        genarate password
+      </button>
+    </div>
+    <script src="pass.js"></script>
+  </body>
+</html>
